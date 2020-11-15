@@ -1,0 +1,31 @@
+npm node-mysql = https://github.com/mysqljs/mysql
+
+
+https://opentutorials.org/module/2026/12020 = 오픈튜토리얼 sql 예제 사이트.
+
+데이터베이스 보기
+show databases;
+
+데이터베이스 생성
+CREATE DATABASE o2 CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+데이터베이스 선택
+use o2;
+
+테이블 생성
+CREATE TABLE `topic` (
+`id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) NOT NULL,
+  `description` text NOT NULL,
+  `author` varchar(30) NOT NULL,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+생성된 테이블 확인
+show tables;
+
+INSERT INTO topic (title, description, author)
+ VALUES('JavaScript','Computer language for web.','amarans');
+
+실행 = mysql -uroot -p
+use o2;
