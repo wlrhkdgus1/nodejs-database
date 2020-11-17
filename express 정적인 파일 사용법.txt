@@ -1,0 +1,25 @@
+app.use(express.static('public'));
+
+app.js에 추가하여 img 나 txt 등 정적인 파일을 사용할수있음.
+
+supervisor app.js
+///////////////////////////////////////////////
+var express = require("express");
+
+var app = express();
+
+app.use(express.static('public'));
+app.get('/' ,function(req,res){
+    res.send('Hello home page');
+});
+
+app.get('/route', function(req,res){
+    res.send('Hello Router, <img src="/route.png">')
+})
+app.get('/login',function(req,res){
+    res.send('<h1>login plase</h1>');
+});
+
+app.listen(3000,function(){
+    console.log('conneted 3000 port');
+});

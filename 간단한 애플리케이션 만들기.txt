@@ -1,0 +1,43 @@
+https://www.npmjs.com/package/supervisor = 사이트
+npm install supervisor -g
+supervisor app.js           // 껏다켰다안해도 저절로 업데이트되서 실행
+
+app.locals.pretty = true; jade 줄바꿈 예쁘게 해주는 코드 
+
+https://expressjs.com/en/5x/api.html 들어가서 request , reponse 등 사용법 익히기
+
+양이많거나 아이디or비밀번호 = post 하지만 body-parser 사용해야됨
+기본적으로 제공하는 것은 get 
+
+post 방식으로 사용할려면 req.body 를 사용해야하는데 body를 사용하려면
+npm install body-parser --saver 깔아야 합니다.
+
+var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }))
+
+
+express 다운로드 및 정리 사이트
+https://velog.io/@godori/ES6-%EC%A0%95%EB%A6%AC-vpjmrh6hhe
+
+npm json 파일 만들려면 npm init
+npm init 하는방법 알아놓기.
+
+jade https://jade-lang.com/
+
+https://nodejs.org/en/about/
+nodejs.org => ABOUT 로 들어가기.
+간단한 서버 열기
+노드실행 후 사이트 > http://127.0.0.1:1337/  들어가면 Hello World 실행
+
+const http = require('http');
+ 
+const hostname = '127.0.0.1';
+const port = 1337;
+ 
+http.createServer((req, res) => {
+ res.writeHead(200, { 'Content-Type': 'text/plain' });
+ res.end('Hello World\n');
+}).listen(port, hostname, () => {
+ console.log(`Server running at http://${hostname}:${port}/`);
+});
+
